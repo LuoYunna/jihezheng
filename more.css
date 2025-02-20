@@ -6,26 +6,27 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    position: relative;
 }
 
-@keyframes fade-in {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* 淡入效果 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-h1, h2, h3, p {
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
-    position: relative;
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
+/* 标题样式 */
 h1 {
     font-size: 3em;
     margin-top: 50px;
 }
 
+/* 文字样式 */
 p {
     font-size: 1.2em;
     line-height: 1.5;
@@ -33,12 +34,12 @@ p {
     margin: 20px auto;
 }
 
-/* "查看更多" 按钮样式 */
+/* "返回主页" 按钮样式 */
 .view-more {
     position: absolute;
-    top: 55%;
+    bottom: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     padding: 15px 40px;
     font-size: 1.5em;
     font-weight: bold;
@@ -55,14 +56,33 @@ p {
     color: #000;
     box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
 }
-
-.fade-in {
+/* 正文样式 */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: 20px auto;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-.fade-in.visible {
+/* 当元素进入视口后，添加 visible 类，让文字淡入 */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* 标题和正文的初始状态 */
+h2, h3, p {
+    opacity: 0; /* 初始不可见 */
+    transform: translateY(30px); /* 下移 30px */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* 进入视口后，应用淡入效果 */
+.visible {
     opacity: 1;
     transform: translateY(0);
 }
