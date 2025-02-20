@@ -1,0 +1,54 @@
+<head>
+<script src="more.js"></script>
+    <link rel="stylesheet" href="more.css">
+</head>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司介绍 - 吉和正株式会社</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 10px cyan, 0 0 20px blue;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            animation: fadeText 3s infinite alternate;
+        }
+        @keyframes fadeText {
+            from { opacity: 0.6; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>吉和正株式会社 | 公司介绍</h1>
+        <p>谨慎经营，专业高效是我们的核心...</p>
+        <p>未来我们将深耕市场，拓展业务版图...</p>
+    </div>
+</body>
+</html>
+
