@@ -167,16 +167,16 @@ body:hover .cursor-glow {
     font-weight: bold;
     color: #ffffff;
     background: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid #bdf7f8;
     cursor: pointer;
     transition: 0.3s;
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
 }
 
 .view-more:hover {
-    background: #4000ff;
-    color: #2600ff;
-    box-shadow: 0 0 15px #0026ff, 0 0 30px #00ffff00, 0 0 45px #00ffff;
+    background: #bdf7f8;
+    color: #adedf8;
+    box-shadow: 0 0 15px #b4edff, 0 0 30px #00ffff, 0 0 45px #00ffff;
 }
 
 /* 导航栏样式，改为蓝色背景并保留发光效果 */
@@ -226,7 +226,7 @@ nav a {
     font-size: 1.2em;
     font-weight: bold;
     transition: 0.3s;
-    text-shadow: 0 0 5px rgba(0, 0, 255, 0.5), 0 0 10px rgba(0, 0, 255, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 0, 255, 0.5);
 }
 
 nav a:hover {
